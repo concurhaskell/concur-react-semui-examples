@@ -1,0 +1,38 @@
+name: concur-react-semui-examples
+version: '0.1.0.0'
+synopsis: Examples for Concur-React-Semantic-UI
+description: Examples for Concur-React-Semantic-UI
+category: Web
+author: Anupam Jain
+maintainer: ajnsit@gmail.org
+copyright: 2017 Anupam Jain
+license: BSD3
+github: concurhaskell/concur-react-semantic-ui
+extra-source-files:
+- README.md
+ghc-options:
+- -threaded
+- -rtsopts
+- -with-rtsopts=-N
+dependencies:
+- base
+- stm >=2.4
+- concur-core
+- concur-react
+- concur-react-semantic-ui
+
+executables:
+  buttons:
+    js-sources: jsbits/index.compiled.js
+    main: Buttons.hs
+    source-dirs: src
+    when:
+    - condition: impl(ghcjs -any)
+      then:
+        source-dirs: src-ghcjs
+        dependencies:
+        - ghcjs-base
+      else:
+        source-dirs: src-ghc
+        dependencies:
+        - ghcjs-base-stub >=0.1

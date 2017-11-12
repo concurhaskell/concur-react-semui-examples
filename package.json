@@ -1,0 +1,13 @@
+{
+  "name": "concur-react-semui-examples",
+  "version": "1.0.0",
+  "description": "Semantic UI examples for Concur-React",
+  "main": "index.js",
+  "author": "Anupam Jain",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0",
+    "semantic-ui-react": "^0.76.0"
+  }
+}

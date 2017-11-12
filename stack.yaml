@@ -1,0 +1,17 @@
+resolver: lts-7.19
+packages:
+- location: .
+- location: ../../concur/
+#    git: https://github.com/ajnsit/concur
+#    commit: 06f8b226935bad2bfd4c6b8b6a76cfab730988aa
+  extra-dep: true
+  subdirs:
+    - concur-core
+    - concur-react
+- location: ../concur-react-semantic-ui
+  extra-dep: true
+extra-deps:
+- natural-transformation-0.4
+- ghcjs-base-stub-0.1.0.3
+flags: {}
+extra-package-dbs: []
